@@ -17,6 +17,14 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="Roberto Blog"
+			href={new URL("rss.xml", Astro.site)}
+		/>
+
 		<ClientRouter />
 	</head>
 	<body class="bg-gray-900 text-white">
